@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" type="image/png" href="./imgs/diary.png">
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <div class="home-div">
+            <a href='/catalog' class="home"><img src="./imgs/house.svg" alt="home"></a>
+        </div>
+        <div class="flags">
+            <button class="flag-it"><img src="./imgs/it.svg" alt="it"></button>
+            <small class="actual-lang"></small>
+            <button class="flag-us"><img src="./imgs/us.svg" alt="us"></button>
+        </div>
+
+    </header>
+    <!-- CONTENT  -->
+    <div class="content">
+        <!-- TITLE  -->
+        <div class="title-div">
+            <img src="./imgs/diary.svg" alt="diary">
+            <h1 class="title">Voice Diary</h1>
+
+        </div>
+        <!-- MIC BUTTON  -->
+        <button class="mic"><img src="./imgs/mic.svg" alt="mic"></button>
+        <!-- MESSAGE INFO  -->
+        <div class="messages-info"></div>
+
+        <!-- FORM  -->
+        <form autocomplete="false">
+            <textarea name="text" id="text" rows="13"></textarea>
+            <button class="btn-submit"><img src="./imgs/sub.svg" alt="sub"></button>
+        </form>
+        <!-- DIARY  -->
+        <div class="diary">
+            <!-- PAGE  -->
+            <div class="diary-page">
+                <div>📝 Today I feel great. </div>
+                <button class='btn-delete' onclick=`deleteFunction(${id})`><img src='./imgs/delete.svg'></button>
+                <small>⌚ 07/08/2020 21:15:16</small></div>
+            <div class="diary-page">
+                <div>📝 You won't believe what happened to me today...</div>
+                <button class='btn-delete' onclick=`deleteFunction(${id})`><img src='./imgs/delete.svg'></button>
+                <small>⌚ 05/08/2020 17:15:16</small></div>
+            <div class="diary-page">
+                <div>📝 Dear diary, let me tell you what happened today...</div>
+                <button class='btn-delete' onclick=`deleteFunction(${id})`><img src='./imgs/delete.svg'></button>
+                <small>⌚ 02/08/2020 22:15:16</small></div>
+            <div class="diary-page">
+                <div>📝 Dear diary, today was a special day...</div>
+                <button class='btn-delete' onclick=`deleteFunction(${id})`><img src='./imgs/delete.svg'></button>
+                <small>⌚ 02/08/2020 20:15:16</small></div>
+        </div>
+
+        <footer>
+            <div>width 💜 @lexpaper </div>
+        </footer>
+        <!-- END CONTENT  -->
+    </div>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
