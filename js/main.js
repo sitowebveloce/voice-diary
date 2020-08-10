@@ -160,27 +160,29 @@ usLang.onclick = () => {
 // ON START PREPEND LOCAL STORAGE VALUES
 // First Retrive
 const loadData = () => {
-    let retriveStored = JSON.parse(localStorage.getItem('diary'));
+        console.log('Loadig...')
+        let retriveStored = JSON.parse(localStorage.getItem('diary'));
 
-    if (retriveStored !== null) {
-        console.log(retriveStored)
-            // LOOP THROUGH AND APPEND TO THE DOM
-        retriveStored.forEach(note => {
-            // console.log(note)
-            // Create a div element
-            let diaryPage = document.createElement('div');
-            // Assign a class name
-            diaryPage.className = 'diary-page';
-            // Attach text to the DOM
-            diaryPage.innerHTML = note.note;
-            // Prepend diary div
-            diary.prepend(diaryPage);
-        });
+        if (retriveStored !== null) {
+            console.log(retriveStored)
+                // LOOP THROUGH AND APPEND TO THE DOM
+            retriveStored.forEach(note => {
+                // console.log(note)
+                // Create a div element
+                let diaryPage = document.createElement('div');
+                // Assign a class name
+                diaryPage.className = 'diary-page';
+                // Attach text to the DOM
+                diaryPage.innerHTML = note.note;
+                // Prepend diary div
+                diary.prepend(diaryPage);
+            });
+        }
+
     }
-
-}
-
-// DELETE
+    // Load data updated 
+loadData()
+    // DELETE
 
 const deleteFunction = (id) => {
     // console.log(id)
@@ -190,8 +192,6 @@ const deleteFunction = (id) => {
     let newData = retriveStored.filter(i => i.id !== id);
     // Save new data in the local storage
     localStorage.setItem('diary', JSON.stringify(newData));
-    // Load data updated 
-    loadData()
-        // Reload the page to see changes
+    // Reload the page to see changes
     window.location.reload();
 }
