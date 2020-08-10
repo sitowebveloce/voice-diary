@@ -15,7 +15,7 @@ const actual = document.querySelector('.actual-lang');
 
 //
 // ─── VOICE RECOGNITION ──────────────────────────────────────────────────────────
-const recognition = new window.webkitSpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new window.webkitSpeechRecognition() || window.webkitSpeechRecognition;
 recognition.continuous = false;
 recognition.lang = it;
 recognition.interimResults = false;
