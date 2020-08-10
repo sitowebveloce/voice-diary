@@ -82,7 +82,7 @@ form,
     flex-direction: column;
     place-items: center;
     padding: 5px;
-    align-items: flex-start;
+    align-items: center;
     margin: 20px auto;
     width: 100%;
 }
